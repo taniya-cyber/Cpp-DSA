@@ -94,12 +94,24 @@ int main(){
 // }
 
 //Creation of 2d Vector:
-std::vector<std::vector<int>> arr(4, std::vector<int>(2, 0));
-//means vector of vector<int> name_of_array (number_of_rows, inside_vector_of_int(size of the array, value with what it is initialized));
+// std::vector<std::vector<int>> arr(4, std::vector<int>(2, 0));
+// //means vector of vector<int> name_of_array (number_of_rows, inside_vector_of_int(size of the array, value with what it is initialized));
 
-int total_rows = arr.size(); //Number of Rows of arr will be equal to the size of arr.
-int total_cols = arr[0].size(); //Number of Columns of arr will be equal to the size of/number of whats inside arr[0] or ANY.As arr[n] contains another array.
+// int total_rows = arr.size(); //Number of Rows of arr will be equal to the size of arr.
+// int total_cols = arr[0].size(); //Number of Columns of arr will be equal to the size of/number of whats inside arr[0] or ANY.As arr[n] contains another array.
 
+// //Creating an array with different columns:
+// std::vector<std::vector<int>> brr (3); //3 is number of rows means the outer vector.
+// //adding columns 
+// brr[0] = std::vector<int> (4);
+// brr[1] = std::vector<int> (2);
+// brr[2] = std::vector<int> (5);
 
+// int Count_of_Rows = brr.size();
+
+// //Finding column count for different column size:
+// for(int i = 0; i < Count_of_Rows; i++){
+//     std::cout<<"Column count "<< i << " " << brr[i].size() <<std::endl;
+// }
     return 0;
 }
