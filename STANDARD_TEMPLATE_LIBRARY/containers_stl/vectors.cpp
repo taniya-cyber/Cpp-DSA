@@ -93,6 +93,13 @@ int main(){
 //     it++;
 // }
 
+//Creation of 2d Vector:
+std::vector<std::vector<int>> arr(4, std::vector<int>(2, 0));
+//means vector of vector<int> name_of_array (number_of_rows, inside_vector_of_int(size of the array, value with what it is initialized));
+
+int total_rows = arr.size(); //Number of Rows of arr will be equal to the size of arr.
+int total_cols = arr[0].size(); //Number of Columns of arr will be equal to the size of/number of whats inside arr[0] or ANY.As arr[n] contains another array.
+
 
     return 0;
 }
