@@ -1,0 +1,15 @@
+# Ignore output folders
+output/
+
+# Ignore executable files
+*.exe
+
+# Ignore object files
+*.obj
+*.o
+
+# Ignore Visual Studio folder
+.vs/
+
+# Ignore Git metadata accidentally created in subfolders
+**/.git
