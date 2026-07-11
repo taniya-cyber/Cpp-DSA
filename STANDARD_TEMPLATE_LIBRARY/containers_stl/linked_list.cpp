@@ -45,6 +45,8 @@ int main(){
     //Traversing through Iterator:
     std::list<int>:: iterator it = myList.begin();
 
+    std::cout << "Iterating the list using iterator, begin and end" << std::endl;
+
     while(it != myList.end()){
         std::cout<< *it << " ";
         it++;
