@@ -28,18 +28,18 @@ int main(){
 
     // //we can check if its empty by: if(pq.empty() == true) {.....}
 
-    //Creation of Min - Heap:
-    std::priority_queue<int, std::vector<int>, std::greater<int> > pqm;
-   //<type_of_queue, type_of_container, greater_int>
-    pqm.push(10);
-    //10
-    pqm.push(230);
-    //10 -> 230
-    pqm.push(87);
-    //10 -> 87 -> 230
+//     //Creation of Min - Heap:
+//     std::priority_queue<int, std::vector<int>, std::greater<int> > pqm;
+//    //<type_of_queue, type_of_container, greater_int>
+//     pqm.push(10);
+//     //10
+//     pqm.push(230);
+//     //10 -> 230
+//     pqm.push(87);
+//     //10 -> 87 -> 230
     
-    std::cout<< "Top of Min - heap queue:  " << pqm.top() << std::endl;
-    pqm.pop(); //removes top; 100.
+//     std::cout<< "Top of Min - heap queue:  " << pqm.top() << std::endl;
+//     pqm.pop(); //removes top; 100.
 
     return 0;
 }
