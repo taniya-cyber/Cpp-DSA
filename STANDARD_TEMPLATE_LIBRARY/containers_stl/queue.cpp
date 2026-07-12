@@ -34,6 +34,6 @@ q.swap(q1);
 //Seeing the front and back of q1
 std::cout << "1st ele in q: " << q.front() << "Last ele in q:  " << q.back();
 
-
+//We can't Traverse a queue using Iterator, we have to pop to see.
     return 0;
 }
