@@ -15,17 +15,37 @@ int main(){
     set.insert(123);
 
     //Size
-    std::cout << set.size() << std::endl;
+    // std::cout << set.size() << std::endl;
     //We have clear() also.
     
     //Traversing: Gives us sorted set, if we change set to unordered_set, then it won't be sorted.
-    std::set<int>::iterator IT = set.begin();
-    while(IT != set.end()){
-        std::cout << *IT << " ";
-        IT++;
+    // std::set<int>::iterator IT = set.begin();
+    // while(IT != set.end()){
+    //     std::cout << *IT << " ";
+    //     IT++;
+    // }
+
+    // std::cout << set.erase(3); //Removes the element WHICH WE INSERTED AT 3rd PLACE.
+
+    //find(""): returns iterator to the give element, if it exists, and reaches to end() if it doesn't.
+
+    if(set.find(15) != set.end()){
+        std::cout << "Found..!";
+    }
+    else{
+      std::cout << "Sorry, Not Found..!";  
     }
 
-    std::cout << set.erase(3); //Removes the element WHICH WE INSERTED AT 3rd PLACE.
+    std::cout<< std::endl;
+
+    //count(element): tells the count of element, how many times it is present, as set doesn't allow duplicacies, so, returns 0 if not exist, and 1 if it does.
+    if(set.count(9) == 0){
+        std::cout << "Can't Found..!";
+    }
+    if(set.count(9) == 1){
+        std::cout << "Found..!";
+    }
+
 
     return 0;
 }
