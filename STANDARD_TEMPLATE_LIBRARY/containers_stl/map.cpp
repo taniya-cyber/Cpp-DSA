@@ -16,17 +16,17 @@
 */
 int main(){ 
     //Creation of Unordered Map: std::type_of_map<type_of_key, type_of_value> name_of_map;
-    std::unordered_map<std::string, std::string> table;
+    // std::unordered_map<std::string, std::string> table;
 
-    //Insertion in Unordered map: two ways
-    table.insert(std::make_pair("en", "England")); //"key", "value"
-    table["in"] = "India"; 
+    // //Insertion in Unordered map: two ways
+    // table.insert(std::make_pair("en", "England")); //"key", "value"
+    // table["in"] = "India"; 
 
-    //3rd way:
-    std::pair<std::string, std::string> p;
-    p.first = "br";
-    p.second = "Brazil";
-    table.insert(p);
+    // //3rd way:
+    // std::pair<std::string, std::string> p;
+    // p.first = "br";
+    // p.second = "Brazil";
+    // table.insert(p);
 
     //Size, Clear
     // std::cout<< table.size() <<std::endl;
@@ -72,23 +72,23 @@ int main(){
 
   //Ordered map is similar but the difference is it sorts everything, so TN is more.
   //Ordered Map:
-  std::map<int, std::string> table1;
-  table1.insert(std::make_pair(100, "Anita"));
-  std::pair<int, std::string> p1;
-  p1.first = 11;
-  p1.second = "Rohiy";
-  table1.insert(p1);
-  table1.insert(std::make_pair(10, "niya"));
+  // std::map<int, std::string> table1;
+  // table1.insert(std::make_pair(100, "Anita"));
+  // std::pair<int, std::string> p1;
+  // p1.first = 11;
+  // p1.second = "Rohiy";
+  // table1.insert(p1);
+  // table1.insert(std::make_pair(10, "niya"));
 
   //Iterating:
-  std::map<int, std::string>::iterator it1 = table1.begin();
-    std::cout << "Traversing the Unordered Map: ";
-    while(it1 != table1.end()){
-        // std::cout << *it << " "; Here, our iterator is pointing that entry where key value pair is there. To print that K-V pair, we have to specify:
-        std::pair<int, std::string> p = *it1;
-        std::cout << (*it1).first << " " << (*it1).second << std::endl; //Now this is pointing the first entry and increasing the "it" value afterwards, and firs is pointing the key, second is printing the value.
-        it1++;
-    }
+  // std::map<int, std::string>::iterator it1 = table1.begin();
+  //   std::cout << "Traversing the Unordered Map: ";
+  //   while(it1 != table1.end()){
+  //       // std::cout << *it << " "; Here, our iterator is pointing that entry where key value pair is there. To print that K-V pair, we have to specify:
+  //       std::pair<int, std::string> p = *it1;
+  //       std::cout << (*it1).first << " " << (*it1).second << std::endl; //Now this is pointing the first entry and increasing the "it" value afterwards, and firs is pointing the key, second is printing the value.
+  //       it1++;
+  //   }
 
   //All other things are same, it just sorts everything.
 
