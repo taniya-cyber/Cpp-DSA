@@ -55,21 +55,42 @@ int main(){
     // table.erase(table.begin(), table.end());
 
     //find(key): if found, iterator of that location will be returned. If not found, it goes to end iterator (means returns it).
-    if (table.find("in")!= table.end()){
-        std::cout << "FOUND..!!";
-    }
-    else{
-        std::cout << "NAHI MILI..!!";
+    // if (table.find("in")!= table.end()){
+    //     std::cout << "FOUND..!!";
+    // }
+    // else{
+    //     std::cout << "NAHI MILI..!!";
+    // }
+
+   //Count() -> Returns the number of element specified by a key; therefore, can be 0 or 1 only, as key can't be duplicated, so, either a key exists, or it does not. Means HOW MANY TIMES A KEY EXIST
+//    if(table.count("in") == 0){
+//     std::cout << "Key doesn't exist";
+//    }
+//    if(table.count("in") == 1){
+//     std::cout << "Found";
+//    }
+
+  //Ordered map is similar but the difference is it sorts everything, so TN is more.
+  //Ordered Map:
+  std::map<int, std::string> table1;
+  table1.insert(std::make_pair(100, "Anita"));
+  std::pair<int, std::string> p1;
+  p1.first = 11;
+  p1.second = "Rohiy";
+  table1.insert(p1);
+  table1.insert(std::make_pair(10, "niya"));
+
+  //Iterating:
+  std::map<int, std::string>::iterator it1 = table1.begin();
+    std::cout << "Traversing the Unordered Map: ";
+    while(it1 != table1.end()){
+        // std::cout << *it << " "; Here, our iterator is pointing that entry where key value pair is there. To print that K-V pair, we have to specify:
+        std::pair<int, std::string> p = *it1;
+        std::cout << (*it1).first << " " << (*it1).second << std::endl; //Now this is pointing the first entry and increasing the "it" value afterwards, and firs is pointing the key, second is printing the value.
+        it1++;
     }
 
-   //Count() -> Returns the number of element specified by a key; therefore, can be 0 or 1 only, as key can't be duplicated, so, either a key exists, or it does not.
-   if(table.count("in") == 0){
-    std::cout << "Key doesn't exist";
-   }
-   if(table.count("in") == 1){
-    std::cout << "Found";
-   }
-
+  //All other things are same, it just sorts everything.
 
     return 0;
 }
