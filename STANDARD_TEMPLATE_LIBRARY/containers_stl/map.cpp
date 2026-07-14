@@ -28,5 +28,28 @@ int main(){
     p.second = "Brazil";
     table.insert(p);
 
+    //Size, Clear
+    // std::cout<< table.size() <<std::endl;
+    // table.clear();
+    // std::cout<< table.size() <<std::endl; //Now size = 0
+
+    //Acessing:
+    std::cout<< table.at("in") <<std::endl; // at("Key_name") returns what is present in that key.
+    //Updating value using at:
+    table.at("in") = "India2";
+    std::cout<< table.at("in") <<std::endl;
+    //Updating using []:
+    table["in"] = "India3";
+    std::cout<< table.at("in") <<std::endl; //or can be done by: table["in"]
+
+    std::unordered_map<std::string, std::string>::iterator it = table.begin();
+    std::cout << "Traversing the Unordered Map: ";
+    while(it != table.end()){
+        // std::cout << *it << " "; Here, our iterator is pointing that entry where key value pair is there. To print that K-V pair, we have to specify:
+        std::pair<std::string, std::string> p = *it;
+        std::cout << (*it).first << " " << (*it).second << std::endl; //Now this is pointing the first entry and increasing the "it" value afterwards, and firs is pointing the key, second is printing the value.
+        it++;
+    }
+
     return 0;
 }
