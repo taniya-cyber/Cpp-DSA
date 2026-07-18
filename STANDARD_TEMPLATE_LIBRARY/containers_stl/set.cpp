@@ -6,7 +6,7 @@
 
 int main(){
     //Creation
-    std::set<int> set;
+    std::set<int> set; //by default, ordered
 
     //Insertion:
     set.insert(9);
@@ -27,7 +27,7 @@ int main(){
 
     // std::cout << set.erase(3); //Removes the element WHICH WE INSERTED AT 3rd PLACE.
 
-    //find(""): returns iterator to the give element, if it exists, and reaches to end() if it doesn't.
+    //find(""): returns iterator to the given element, if it exists, and reaches to end() if it doesn't.
 
     if(set.find(15) != set.end()){
         std::cout << "Found..!";
