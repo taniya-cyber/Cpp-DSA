@@ -1,0 +1,35 @@
+#include<iostream>
+#include<algorithm>
+#include<numeric>
+#include<vector>
+
+
+int main(){
+
+    std::vector<int> arr(5);
+    arr[0] = 10;
+    arr[1] = 2;
+    arr[2] = 3;
+    arr[3] = 44;
+    arr[4] = 22;
+    int sum = 0; //If I change value of sum, eg. 100, then it will be added to sum of elements of Vectors.
+    //1. std::accumulate : computes the sum of elements in range: (range, initial_value_of_sum)
+    int totalsum = std::accumulate(arr.begin(), arr.end(), sum);
+    std::cout << totalsum << std::endl;
+
+    //2. Inner Product: std::inner_product(range of 1, begnning of 2(no need to add ending of 2, as product depends on range of 1)) -> suppose first = {1,2,3}, second = {3,4,5} , Inner product : 1*3, 2*4, 3*5 -> 3 + 8 + 15 -> 26 
+
+    std::vector<int> a;
+    a.push_back(1);
+    a.push_back(2);
+    a.push_back(3);
+
+    std::vector<int> b;
+    b.push_back(3);
+    b.push_back(4);
+    b.push_back(5);
+
+    int inner_product = std::inner_product(a.begin(), a.end(), b.begin(), 0); //Zero is initial value of the sum
+    std::cout << inner_product << std::endl;
+    return 0;
+}
