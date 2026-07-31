@@ -19,7 +19,7 @@ int main()
     arr[1] = 2;
     arr[2] = 10;
     arr[3] = 4;
-    int target = 4;
+    //int target = 4;
     // 1. std::for_each(beginning, end, function_call): This algorithm is used when you need to apply a specific function to a specific range, eg.:
     
     //using for_each:
@@ -59,12 +59,32 @@ int main()
     //     std::cout<< a <<std::endl;
     // }
 
-    //8. Rotate: Rotates element in a range: std::rotate(beginning of rotation from, How much from begnning we should move, end);
-    std::rotate(arr.begin(), arr.begin() + 2, arr.end()); 
-    //As we have(element(index)): 1(0) -> 2(1) -> 10(2) -> 4(3); After Rotation: 10 -> 4 -> 1 -> 2, index will be changed also. 
-    for(int a: arr){
-        std::cout<< a <<std::endl;
-    }
+    // //8. Rotate: Rotates element in a range: std::rotate(beginning of rotation from, How much from begnning we should move, end);
+    // std::rotate(arr.begin(), arr.begin() + 2, arr.end()); 
+    // //As we have(element(index)): 1(0) -> 2(1) -> 10(2) -> 4(3); After Rotation: 10 -> 4 -> 1 -> 2, index will be changed also. 
+    // for(int a: arr){
+    //     std::cout<< a <<std::endl;
+    // }
+
+    //9. std::unique(): Removes Duplicate elements from a SORTED range. Returns Iterator til range of unique list of elements, and duplicate elements afterwards:
+    std::vector<int> ar(8);
+    ar[0] = 1;
+    ar[1] = 1;
+    ar[2] = 1;
+    ar[3] = 2;
+    ar[4] = 2;
+    ar[5] = 3;
+    ar[6] = 3;
+    ar[7] = 4;
     
+
+    auto IT = std::unique(ar.begin(), ar.end());
+   //values after IT iterator are duplicate, so, they have to be removed:
+   ar.erase(IT, ar.end());
+   for(int a: ar){
+    std::cout<< a << " ";
+   }
+
+
     return 0;
 }
