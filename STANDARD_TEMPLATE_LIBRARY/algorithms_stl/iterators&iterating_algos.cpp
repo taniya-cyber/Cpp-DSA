@@ -66,7 +66,7 @@ int main()
     //     std::cout<< a <<std::endl;
     // }
 
-    //9. std::unique(): Removes Duplicate elements from a SORTED range. Returns Iterator til range of unique list of elements, and duplicate elements afterwards:
+    // //9. std::unique(): Removes Duplicate elements from a SORTED range. Returns Iterator til range of unique list of elements, and duplicate elements afterwards:
     std::vector<int> ar(8);
     ar[0] = 1;
     ar[1] = 1;
@@ -78,12 +78,19 @@ int main()
     ar[7] = 4;
     
 
-    auto IT = std::unique(ar.begin(), ar.end());
-   //values after IT iterator are duplicate, so, they have to be removed:
-   ar.erase(IT, ar.end());
-   for(int a: ar){
-    std::cout<< a << " ";
-   }
+//     auto IT = std::unique(ar.begin(), ar.end());
+//    //values after IT iterator are duplicate, so, they have to be removed:
+//    ar.erase(IT, ar.end());
+//    for(int a: ar){
+//     std::cout<< a << " ";
+//    }
+
+    //10. std::partition(range, func for partition): Returns an Iterator, before the end of iterator,, we have partition 1, and after it, we have partition 2.
+    auto iT = std::partition(arr.begin(), arr.end(), checkEven);
+    //Separates even and odd:
+    for(int a: arr){
+        std::cout << a << " ";
+    }
 
 
     return 0;
