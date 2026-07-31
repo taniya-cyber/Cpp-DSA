@@ -1,11 +1,13 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-// Algorithms in STL: In STL, it includes a wide range of algorithms that operate on various containers (vectors, lists, sets and maps) and provide essential functionality for data manipulation. Tjese are defined in <algorithms> header and are part of STL's core functionality.
+// Algorithms in STL: In STL, it includes a wide range of algorithms that operate on various containers (vectors, lists, sets and maps) and provide essential functionality for data manipulation. These are defined in <algorithms> header and are part of STL's core functionality. 
 
-// void PrintDouble(int e){
-//     std::cout << 2*e << std::endl;
-// }
+//In short, we have algorithms or operations like add, sub, finding max, etc. in format of Functions in C++.
+
+void PrintDouble(int e){
+    std::cout << 2*e << std::endl;
+}
 
 int main()
 {
@@ -17,7 +19,7 @@ int main()
     // 1. std::for_each(beginning, end, function_call): This algorithm is used when you nee to apply a specific function to a specific range, eg.:
     
     //using for_each:
-    // std::for_each(arr.begin(), arr.end(), PrintDouble);
+    std::for_each(arr.begin(), arr.end(), PrintDouble);
 
     //2. std::find(beginning, end, value to be found): Returns Iterator:
     //firstly making pointer:
