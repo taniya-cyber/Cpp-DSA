@@ -17,7 +17,7 @@ int main()
     std::vector<int> arr(4);
     arr[0] = 1;
     arr[1] = 2;
-    arr[2] = 3;
+    arr[2] = 1;
     arr[3] = 4;
     int target = 4;
     // 1. std::for_each(beginning, end, function_call): This algorithm is used when you need to apply a specific function to a specific range, eg.:
@@ -35,6 +35,28 @@ int main()
     //std::find_if(beginning, end, condition in form of function) -> Returns an Iterator of the value which follows the condition.
     auto it1 = std::find_if(arr.begin(), arr.end(), checkEven);
     std::cout<< *it1 << std::endl;
-    
+
+    //4. std::count(Range, target): Finds the number of Occurances. 
+    int ans = std::count(arr.begin(), arr.end(), 1);
+    std::cout << ans <<std::endl;
+
+    //5. std::count_if(Range, Function of condition): Returns the count of numbers satisfyig the condition. 
+    int ans1 = std::count_if(arr.begin(), arr.end(), checkEven);
+    std::cout<< ans1 <<std::endl;
+
+    //6. std::sort: Sorts in ascending order and returns the ordered sequence.
+    std::sort(arr.begin(), arr.end());
+    //Checking:
+    for(int a: arr){
+        std::cout<< a <<std::endl;
+    }
+
+    //7. Reversing:
+    std::reverse(arr.begin(), arr.end());
+    std::cout<< "Reversed vector:  " <<std::endl;
+    //Checking:
+    for(int a: arr){
+        std::cout<< a <<std::endl;
+    }
     return 0;
 }
