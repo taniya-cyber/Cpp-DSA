@@ -30,9 +30,9 @@ int main(){
     // auto IT2 = std::upper_bound(arr.begin(), arr.end(), 30); //It only prints value greater than we gave.
     // std::cout<< *IT2 << std::endl;
 
-    //4. std::equal_range = Finds a range of elements equal to a value in a sorted range.
-    auto p = std::equal_range(arr.begin(), arr.end(), 30);
-    std::cout << *(p.first) << std::endl;
-    std::cout << *(p.second) << std::endl;
+    // //4. std::equal_range = Finds a range of elements equal to a value in a sorted range.
+    // auto p = std::equal_range(arr.begin(), arr.end(), 30);
+    // std::cout << *(p.first) << std::endl;
+    // std::cout << *(p.second) << std::endl;
     return 0;
 }
