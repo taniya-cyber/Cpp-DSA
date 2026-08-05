@@ -17,7 +17,7 @@ int main(){
     int totalsum = std::accumulate(arr.begin(), arr.end(), sum);
     std::cout << totalsum << std::endl;
 
-    //2. Inner Product: std::inner_product(range of 1, begnning of 2(no need to add ending of 2, as product depends on range of 1)) -> suppose first = {1,2,3}, second = {3,4,5} , Inner product : 1*3, 2*4, 3*5 -> 3 + 8 + 15 -> 26 
+    //2. Inner Product: std::inner_product(range of vector 1, begnning of vector 2(no need to add ending of vector 2, as product depends on range of 1), 0 (Initial vALUE, IF Its 100, 100 will be added to our totalSum after multiplication.)) -> suppose first = {1,2,3}, second = {3,4,5} , Inner product : 1*3, 2*4, 3*5 -> 3 + 8 + 15 -> 26 (Initial value was 0, so Nothing extra was added.)
 
     std::vector<int> a;
     a.push_back(1);
