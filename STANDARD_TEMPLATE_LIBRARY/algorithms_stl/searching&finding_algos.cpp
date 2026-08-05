@@ -22,14 +22,17 @@ int main(){
     //     std::cout<< target << " FOunD";
     // }
 
-    //2. std::lower_bound = Finds the first element greater or equal to a value in sorted range means:
-    auto IT1 = std::lower_bound(arr.begin(), arr.end(), 24); //As 24 is not in arr vector, so it will return Iterator for the greater value than or we can say just after 24, eg. 30.
-    std::cout<< *IT1 << std::endl;
+    // //2. std::lower_bound = Finds the first element greater or equal to a value in sorted range means:
+    // auto IT1 = std::lower_bound(arr.begin(), arr.end(), 24); //As 24 is not in arr vector, so it will return Iterator for the greater value than or we can say just after 24, eg. 30.
+    // std::cout<< *IT1 << std::endl;
 
-    //3. std::upper_bound: Finds the first element greater NOT equal to a value in sorted range means:
-    auto IT2 = std::upper_bound(arr.begin(), arr.end(), 30); //It only prints value greater than we gave.
-    std::cout<< *IT2 << std::endl;
+    // //3. std::upper_bound: Finds the first element greater NOT equal to a value in sorted range means:
+    // auto IT2 = std::upper_bound(arr.begin(), arr.end(), 30); //It only prints value greater than we gave.
+    // std::cout<< *IT2 << std::endl;
 
-    //4. 
+    //4. std::equal_range = Finds a range of elements equal to a value in a sorted range.
+    auto p = std::equal_range(arr.begin(), arr.end(), 30);
+    std::cout << *(p.first) << std::endl;
+    std::cout << *(p.second) << std::endl;
     return 0;
 }
