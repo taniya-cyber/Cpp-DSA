@@ -36,7 +36,14 @@ int main(){
     
     std::vector<int> result(b.size()); 
     std::partial_sum(b.begin(), b.end(), result.begin());
-    //it returns answer in form of output asin vector form. So, we write result.begin() there to add elements in it. 
-    
+    //it returns answer in form of output as in vector or any container of our choice form. So, we write result.begin() there to add elements in it. 
+
+
+    //4. std::iota = Fills a range with incrementing values.
+    std::vector<int> one(5);
+    std::iota(one.begin(), one.end(), 250); //250 is the initial value. 
+    for(int a: one){
+        std::cout<< a << " ";
+    }    
     return 0;
 }
