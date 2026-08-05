@@ -31,5 +31,12 @@ int main(){
 
     int inner_product = std::inner_product(a.begin(), a.end(), b.begin(), 0); //Zero is initial value of the sum
     std::cout << inner_product << std::endl;
+
+    //3. std::partial_sum = This calculates the sum partially, Like firstly from the starting element to the starting one then to the 1st to 2nd one then 1, 2, and 3rd one and so on.
+    
+    std::vector<int> result(b.size()); 
+    std::partial_sum(b.begin(), b.end(), result.begin());
+    //it returns answer in form of output asin vector form. So, we write result.begin() there to add elements in it. 
+    
     return 0;
 }
