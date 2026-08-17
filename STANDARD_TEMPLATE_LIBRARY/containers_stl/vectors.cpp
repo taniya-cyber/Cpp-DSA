@@ -5,7 +5,7 @@
 
 int main(){
 //Creation: 
-// std::vector<int> v;
+//  std::vector<int> v;
 // std::vector<int> distance(15, 10); 
 // //This means vector<datatype> name_of_dynamic_array(size of it, if you want to initialize it with any value in all boxes)
 
@@ -15,7 +15,7 @@ int main(){
 // // std::cout << *(distance.end()) << std::endl; //Prints Something Random as distance.end() points to location just after the vector's last element.
 
 // //Pushing and Poping elements:
-// v.push_back(10);
+//  v.push_back(10);
 // v.push_back(20);
 // v.push_back(40);
 // v.push_back(80);
