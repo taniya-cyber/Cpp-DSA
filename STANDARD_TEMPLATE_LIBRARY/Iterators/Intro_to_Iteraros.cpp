@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<forward_list>
 // Iterator: Is a pointer - like object representing an element's specific position in a container(can be vector, list, queue, etc.) and its used to iterate over elements in container, and we had pointers then still we made Iterators because its a standardized way for all containers to traverse on. Eg. container_name.begin(), container_name.end() and container_name.begin() + i takes you to ith index.
 
 int main()
@@ -24,7 +25,19 @@ int main()
     //6. itr1 != itr2 means we are comparing them; if they are pointing DIFFERENT position, then true is returned
     //7. itr = itr1 = assigns/copies position by itr1 to itr iterator.
     //8. itr->m = returns the member value m of object pointed by the iterator and is equivalent to (*itr).m, *itr represents A PAIR (pair<int, int>) inside a MAP, and pair has two types of values: pair.first(block 1), which can be accessed by (*itr).first or  itr->first and similalry for second. 
-    
+
+    //Types of Iterator:
+    //1. Input Iterator: Moves in forward direction, and can only read, for example in algos: std::find(), std::for_each. Creating an input iterator to read values from cin:
+    //istream_iterator<int> input_itr(cin); 
+
+    //2. Output Iterator: Is used to write vlaues to a container in forward direction only. Creating an output iterator to write values from cout:
+    //ostream_iterator<int> output_itr(cout, " ");
+
+    //3. Forward Iterator: Is based on Singly Linked List. Can do both read and write, but only in forward direction. 
+    std::forward_list<int> num{2,3,4};
+    std::forward_list<int>::iterator itr = num.begin();
+    //using while loop, we can change value or read values.
+    //and in loop: i-- or --i can't occur as its based on singley linked list
 
     
     return 0;
