@@ -7,15 +7,15 @@
 int main()
 {
     // Iterating on a vector:
-    std::vector<int> v;
-    v.push_back(10);
-    v.push_back(11);
-    v.push_back(12);
+    // std::vector<int> v;
+    // v.push_back(10);
+    // v.push_back(11);
+    // v.push_back(12);
 
-    std::vector<int>:: iterator IT;
-    for(IT = v.begin(); IT != v.end(); IT++){
-        std::cout<< *IT <<" ";
-    }
+    // std::vector<int>:: iterator IT;
+    // for(IT = v.begin(); IT != v.end(); IT++){
+    //     std::cout<< *IT <<" ";
+    // }
 
     //Iterating operations:
     //1. *itr = Returns the element at current position
@@ -35,27 +35,56 @@ int main()
     //ostream_iterator<int> output_itr(cout, " ");
 
     //3. Forward Iterator: Is based on Singly Linked List. Can do both read and write, but only in forward direction. 
-    std::forward_list<int> num{2,3,4};
-    std::forward_list<int>::iterator itr = num.begin();
+    // std::forward_list<int> num{2,3,4};
+    // std::forward_list<int>::iterator itr = num.begin();
     //using while loop, we can change value or read values.
     //and in loop: i-- or --i can't occur as its based on singley linked list
 
     //4. Bi-directional Iterator: Is based on Doubly Linked List. Can do both read and write, in both forward direction and Bckward direction. Supported Containers: Doubly eneded queues (Deque), and list.
-    std::list<int> MYlist;
-    MYlist.push_back(20);
-    MYlist.push_back(1);
-    MYlist.push_back(2);
-    MYlist.push_back(3);
+    // std::list<int> MYlist;
+    // MYlist.push_back(20);
+    // MYlist.push_back(1);
+    // MYlist.push_back(2);
+    // MYlist.push_back(3);
 
     //Traversing using Iterator:
-    std::list<int>:: iterator it = MYlist.begin();
+    // std::list<int>:: iterator it = MYlist.begin();
 
-    while(it != MYlist.end()){
-        //Writing
-        (*it) = (*it) * 2;
-        //Reading
+    // while(it != MYlist.end()){
+    //     //Writing
+    //     (*it) = (*it) * 2;
+    //     //Reading
+    //     std::cout << *it << " ";
+    //     //Move Forward
+    //     it++;
+    // }
+
+    // // Traversing Backward using Iterator:
+    // std::list<int>:: iterator it = MYlist.end();
+
+    // while(it != MYlist.begin()){
+    //      //Move Backward, as we are on end position, and end doesn't contain any value, that's why doing this firstly
+    //     it--;
+    //     std::cout << *it << " ";
+    // }
+
+    //Random Access Iterator: They offer full navigation capabilites, allowing you to move any element inside a container in constant time, we can use it in vectors, arrays and deques.
+    std::vector<int> arr = {1,2,3,45,5};
+
+    
+    //forward and backward movements can be made as we did above.
+    // // Traversing Backward using Iterator:
+    // std::vector<int>:: iterator it = arr.end() - 1;
+    // while(it != arr.begin()){
+    //     std::cout << *it << " ";
+         //Move Backward, doing this after printing as we already subtracted above; this method skips the first element so, we should use the aboce method.
+        // it--;
+    // }
+
+    //Random Access Iterator:
+    std::vector<int>:: iterator it = arr.begin() + 4;
         std::cout << *it << " ";
-        it++;
-    }
+        
+
     return 0;
 }
