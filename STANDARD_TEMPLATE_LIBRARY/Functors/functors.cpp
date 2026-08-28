@@ -1,0 +1,1 @@
+//Functors are short form of "Function Objects". Are objects, behaving like Functions, and can be called with same syntax. They are implemented as classes or structs that overload the operator(). Are commonly used as arguement to STL algorithms, providing custom behaviour.
