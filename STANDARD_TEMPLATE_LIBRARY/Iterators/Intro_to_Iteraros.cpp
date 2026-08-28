@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include<forward_list>
+#include<list>
 // Iterator: Is a pointer - like object representing an element's specific position in a container(can be vector, list, queue, etc.) and its used to iterate over elements in container, and we had pointers then still we made Iterators because its a standardized way for all containers to traverse on. Eg. container_name.begin(), container_name.end() and container_name.begin() + i takes you to ith index.
 
 int main()
@@ -39,6 +40,22 @@ int main()
     //using while loop, we can change value or read values.
     //and in loop: i-- or --i can't occur as its based on singley linked list
 
-    
+    //4. Bi-directional Iterator: Is based on Doubly Linked List. Can do both read and write, in both forward direction and Bckward direction. Supported Containers: Doubly eneded queues (Deque), and list.
+    std::list<int> MYlist;
+    MYlist.push_back(20);
+    MYlist.push_back(1);
+    MYlist.push_back(2);
+    MYlist.push_back(3);
+
+    //Traversing using Iterator:
+    std::list<int>:: iterator it = MYlist.begin();
+
+    while(it != MYlist.end()){
+        //Writing
+        (*it) = (*it) * 2;
+        //Reading
+        std::cout << *it << " ";
+        it++;
+    }
     return 0;
 }
